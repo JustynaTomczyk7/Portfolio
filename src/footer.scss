@@ -1,0 +1,117 @@
+@use './variables.scss' as *;
+
+.footer {
+    background-color: $footerColor;
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+
+    .contact-to-me {
+        display: grid;
+        padding: 0 30px;
+
+        @media (min-width: 576px) {
+            padding: 0 50px;
+        }
+
+        @media (min-width: 650px) {
+            padding: 0 70px;
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+            padding: 0 70px;
+        }
+    }
+}
+
+.contact {
+    width: 100%;
+    position: relative;
+    order: 2;
+    padding: 30px 15px 60px 15px;
+
+    h2 {
+        color: $black;
+        font-weight: 500;
+        font-size: 1.2em;
+        margin-bottom: 15px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+    }
+
+    .email, .phone {
+        display: flex;
+        height: 50px;
+        align-items: center;
+
+        img {
+            width: 20px;
+
+            @media (min-width: 992px) {
+                width: 24px;
+            }
+        }
+
+        p {
+            padding-left: 30px;
+        }
+    }
+
+    .contact-img {
+        position: absolute;
+        left: 48%;
+        bottom: 0;
+
+        img {
+            width: 140px;
+
+            @media (min-width: 450px) {
+                width: 150px;
+            }
+
+            @media (min-width: 576px) {
+                width: 200px;
+            }
+
+            @media (min-width: 650px) {
+                width: 240px;
+            }
+
+            @media (min-width: 768px) {
+                width: 230px;
+            }
+
+            @media (min-width: 992px) {
+                width: 280px;
+            }
+        }
+
+        @media (min-width: 450px) {
+            left: 55%;
+        }
+
+        @media (min-width: 576px) {
+            left: 57%;
+        }
+
+        @media (min-width: 768px) {
+            left: 8%;
+        }
+
+        @media (min-width: 992px) {
+            left: 25%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        width: 50%;
+        position: relative;
+        order: 1;
+        padding: 0;
+    }
+}
+

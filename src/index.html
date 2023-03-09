@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Justyna Tomczyk </title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <%= require('html-loader!./header.html').default %>
+        <div class="content" id="content-website">
+            <div class="bg-white">
+                <div class="container">
+                    <%= require('html-loader!./about-me.html').default %>
+                </div> 
+            </div>
+
+            <div class="container">
+                <%= require('html-loader!./skills.html').default %>
+            </div>  
+
+            <div class="bg-white">
+                <div class="container">
+                    <%= require('html-loader!./projects.html').default %>
+                </div> 
+            </div>
+        </div>
+        <%= require('html-loader!./footer.html').default %>
+        <%= require('html-loader!./btn-back-to-top.html').default %>
+        
+    </body>
+</html>
