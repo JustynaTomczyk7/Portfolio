@@ -1,4 +1,4 @@
-# 💻 Portfolio - Justyna Tomczyk 👩🏻‍💻 Front-end Developer
+# Portfolio - Justyna Tomczyk 👩🏻‍💻 Front-end Developer
 
 ## Table of contents
 
