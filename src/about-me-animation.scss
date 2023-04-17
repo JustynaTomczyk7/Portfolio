@@ -1,111 +1,111 @@
-@use './variables.scss' as *;
+@use "./variables.scss" as *;
 
 .line {
-    display: none;
+  display: none;
 
-    @media (min-width: 768px) {
-        display: block;
-        width: 70px;
-        height: 10px;
-        background-color: $green;
-        position: absolute;
-        z-index: 1;
-        top: -10px;
-        right: -10px;
-        opacity: 0;
-        visibility: hidden;
-        transition-duration: 400ms;
+  @media (min-width: 768px) {
+    display: block;
+    width: 70px;
+    height: 10px;
+    background-color: $green;
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: -10px;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 400ms;
 
-        &::after {
-            content: '';
-            height: 70px;
-            width: 10px;
-            background-color: $green;
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 1;
-        }
+    &::after {
+      content: "";
+      height: 70px;
+      width: 10px;
+      background-color: $green;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
     }
+  }
 
-    @media (min-width: 992px) {
-        width: 100px;
-        height: 12px;
-        top: -12px;
-        right: -12px;
+  @media (min-width: 992px) {
+    width: 100px;
+    height: 12px;
+    top: -12px;
+    right: -12px;
 
-        &::after {
-            content: '';
-            height: 100px;
-            width: 12px;
-        }
+    &::after {
+      content: "";
+      height: 100px;
+      width: 12px;
     }
+  }
 
-    @media (min-width: 1200px) {
-        width: 100px;
-        height: 15px;
-        top: -15px;
-        right: -15px;
+  @media (min-width: 1200px) {
+    width: 100px;
+    height: 15px;
+    top: -15px;
+    right: -15px;
 
-        &::after {
-            content: '';
-            height: 100px;
-            width: 15px;
-        }
+    &::after {
+      content: "";
+      height: 100px;
+      width: 15px;
     }
+  }
 }
 
 .line2 {
-    display: none;
+  display: none;
 
-    @media (min-width: 768px) {
-        display: block;
-        width: 70px;
-        height: 10px;
-        background-color: $green;
-        position: absolute;
-        z-index: 1;
-        bottom: -10px;
-        left: -10px;
-        opacity: 0;
-        visibility: hidden;
-        transition-duration: 400ms;
+  @media (min-width: 768px) {
+    display: block;
+    width: 70px;
+    height: 10px;
+    background-color: $green;
+    position: absolute;
+    z-index: 1;
+    bottom: -10px;
+    left: -10px;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 400ms;
 
-        &::after {
-            content: '';
-            height: 70px;
-            width: 10px;
-            background-color: $green;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-        }
+    &::after {
+      content: "";
+      height: 70px;
+      width: 10px;
+      background-color: $green;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
     }
+  }
 
-    @media (min-width: 992px) {
-        width: 100px;
-        height: 12px;
-        bottom: -12px;
-        left: -12px;
+  @media (min-width: 992px) {
+    width: 100px;
+    height: 12px;
+    bottom: -12px;
+    left: -12px;
 
-        &::after {
-            content: '';
-            height: 100px;
-            width: 12px;
-        }
+    &::after {
+      content: "";
+      height: 100px;
+      width: 12px;
     }
+  }
 
-    @media (min-width: 1200px) {
-        width: 100px;
-        height: 15px;
-        bottom: -15px;
-        left: -15px;
+  @media (min-width: 1200px) {
+    width: 100px;
+    height: 15px;
+    bottom: -15px;
+    left: -15px;
 
-        &::after {
-            content: '';
-            height: 100px;
-            width: 15px;
-        }
+    &::after {
+      content: "";
+      height: 100px;
+      width: 15px;
     }
+  }
 }

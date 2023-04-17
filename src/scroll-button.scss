@@ -1,4 +1,4 @@
-@use './variables.scss' as *;
+@use "./variables.scss" as *;
 
 $scrollHeight: 40px;
 $scrollWidth: 20px;
@@ -9,48 +9,48 @@ $scrollHoverColor: $green;
 $scrollWheelHoverColor: $scrollHoverColor;
 
 .scroll-btn-container {
-    text-align: center;
+  text-align: center;
 
-    .scroll-outer {
-        position: relative;
-        display: inline-block;
+  .scroll-outer {
+    position: relative;
+    display: inline-block;
 
-        height: $scrollHeight;
-        width: $scrollWidth;
+    height: $scrollHeight;
+    width: $scrollWidth;
 
-        border: 2px solid $scrollColor;
-        border-radius: $scrollHeight;
-        
-        transition: border-color $hoverTransition;
+    border: 2px solid $scrollColor;
+    border-radius: $scrollHeight;
 
-        .scroll-wheel {
-        $wheelWidth: #{calc($scrollWidth / 6)};
-        $halfWheelWidth: #{calc($scrollWidth / 12)};
+    transition: border-color $hoverTransition;
 
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        margin-left: -$halfWheelWidth;
+    .scroll-wheel {
+      $wheelWidth: #{calc($scrollWidth / 6)};
+      $halfWheelWidth: #{calc($scrollWidth / 12)};
 
-        height: #{calc($scrollHeight / 4)};
-        width: $wheelWidth;
-        background-color: $scrollWheelColor;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      margin-left: -$halfWheelWidth;
 
-        border-radius: $wheelWidth;
-        
-        transition: background-color $hoverTransition;
-        
-        animation: scroll 1.4s infinite linear;
+      height: #{calc($scrollHeight / 4)};
+      width: $wheelWidth;
+      background-color: $scrollWheelColor;
+
+      border-radius: $wheelWidth;
+
+      transition: background-color $hoverTransition;
+
+      animation: scroll 1.4s infinite linear;
     }
-    
+
     &:hover {
-        border-color: $scrollHoverColor;
+      border-color: $scrollHoverColor;
 
-        .scroll-wheel {
-            background-color: $scrollWheelHoverColor;
-        }
+      .scroll-wheel {
+        background-color: $scrollWheelHoverColor;
+      }
     }
-    }
+  }
 }
 
 @keyframes scroll {

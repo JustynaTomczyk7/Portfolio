@@ -1,84 +1,84 @@
-@use './variables.scss' as *;
+@use "./variables.scss" as *;
 
 .projects {
-    width: 100%;
-    padding: 60px 30px;
+  width: 100%;
+  padding: 60px 30px;
+  text-align: center;
+
+  h3 {
     text-align: center;
-
-    h3 {
-        text-align: center;
-        font-size: 200%;
-        font-weight: 500;
-        margin-bottom: 40px;
-        color: $green;
-
-        @media (min-width: 768px) {
-            margin-bottom: 60px;
-        }
-    }
-
-    @media (min-width: 576px) {
-        padding: 60px 50px;
-    }
-
-    @media (min-width: 650px) {
-        padding: 60px 70px;
-    }
+    font-size: 200%;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: $green;
 
     @media (min-width: 768px) {
-        padding: 60px 90px 100px 90px;
+      margin-bottom: 60px;
     }
+  }
+
+  @media (min-width: 576px) {
+    padding: 60px 50px;
+  }
+
+  @media (min-width: 650px) {
+    padding: 60px 70px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 60px 90px 100px 90px;
+  }
 }
 
 .all-projects * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .all-projects {
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "project1 project1 project1 project1"
-        "project2 project2 project5 project5"
-        "project3 project4 project5 project5"
-        "project6 project6 project7 project7";
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "project1 project1 project1 project1"
+    "project2 project2 project5 project5"
+    "project3 project4 project5 project5"
+    "project6 project6 project7 project7";
 }
 
 .project1 {
-    grid-area: project1;
+  grid-area: project1;
 }
 
 .project2 {
-    grid-area: project2;
+  grid-area: project2;
 }
 
 .project3 {
-    grid-area: project3;
+  grid-area: project3;
 }
 
 .project4 {
-    grid-area: project4;
+  grid-area: project4;
 }
 
 .project5 {
-    grid-area: project5;
+  grid-area: project5;
 }
 
 .project6 {
-    grid-area: project6;
+  grid-area: project6;
 }
 
 .project7 {
-    grid-area: project7;
+  grid-area: project7;
 }
 
 .project {
-    padding: 5px;
+  padding: 5px;
 }
 
 .img-project {
-    width: 100%;
-    box-shadow: 0px 0px 39px -13px rgb(133 133 133);
+  width: 100%;
+  box-shadow: 0px 0px 39px -13px rgb(133 133 133);
 }

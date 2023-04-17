@@ -1,133 +1,135 @@
-@use './variables.scss' as *;
+@use "./variables.scss" as *;
 
 /* menu */
 .menu-btn {
-    height: 24px;
+  height: 24px;
+  width: 35px;
+  cursor: pointer;
+  margin: 15px 20px 15px auto;
+
+  span,
+  span::before,
+  span::after {
+    background: $green;
+    border-radius: 3px;
+    content: "";
+    position: absolute;
     width: 35px;
-    cursor: pointer;
-    margin: 15px 20px 15px auto;
+    height: 4px;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+  }
 
-    span, span::before, span::after {
-        background: $green;
-        border-radius: 3px;
-        content: '';
-        position: absolute;
-        width: 35px;
-        height: 4px;         
-        margin-top: 10px; 
-        transition: .3s ease-in-out;
+  span {
+    &::before {
+      margin-top: -10px;
     }
 
-    span {
-        &::before {
-            margin-top:-10px;
-        }
-
-        &::after {
-            margin-top:10px;
-        }
+    &::after {
+      margin-top: 10px;
     }
+  }
 
-    @media (min-width: 768px) {
-        display: none;
-    }
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-btn.active {
-    span {
-        background: transparent;
+  span {
+    background: transparent;
 
-        &::before {
-            margin-top: 0;
-            transform: rotate(45deg);
-        }
-
-        &::after {
-            margin-top: 0;
-            transform: rotate(-45deg);
-        }
+    &::before {
+      margin-top: 0;
+      transform: rotate(45deg);
     }
+
+    &::after {
+      margin-top: 0;
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 /* header */
 .btn-header {
-    display: block;
-    width: fit-content;
-    background-color: $green;
-    border: 3px solid $green;
-    border-radius: 50px;
-    font-size: 1.1em;
-    padding: 12px 20px;
-    color: $softWhite;
-    text-decoration: none;
+  display: block;
+  width: fit-content;
+  background-color: $green;
+  border: 3px solid $green;
+  border-radius: 50px;
+  font-size: 1.1em;
+  padding: 12px 20px;
+  color: $softWhite;
+  text-decoration: none;
 
-    &:hover {
-        background-color: $softWhite;
-        color: $green;
-        cursor: pointer;
-    }
+  &:hover {
+    background-color: $softWhite;
+    color: $green;
+    cursor: pointer;
+  }
 }
 
 /* projects */
 .btn-projects {
-    background-color: $green;
-    border: 3px solid $green;
-    border-radius: 50px;
-    padding: 6px 12px;
-    color: $white;
-    margin-top: 30px;
-    display: inline-flex;
-    text-decoration: none;
+  background-color: $green;
+  border: 3px solid $green;
+  border-radius: 50px;
+  padding: 6px 12px;
+  color: $white;
+  margin-top: 30px;
+  display: inline-flex;
+  text-decoration: none;
 
-    img {
-        width: 30px;
+  img {
+    width: 30px;
 
-        @media (min-width: 992px) {
-            width: 40px;
-        }
+    @media (min-width: 992px) {
+      width: 40px;
     }
+  }
 
-    p {
-        align-self: center;
-        padding-left: 10px;
-        font-size: 1.1em;
-        font-weight: 600;
-    }
+  p {
+    align-self: center;
+    padding-left: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 
-    @media (min-width: 768px) {
-        padding: 8px 16px;
-        margin-top: 60px;
-    }
+  @media (min-width: 768px) {
+    padding: 8px 16px;
+    margin-top: 60px;
+  }
 }
 
 /* scroll to top */
 .btn-back-to-top {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    display: none;
-    background-color: transparent;
-    padding: 0;
-    border: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
 
-    @media (min-width: 768px) {
-        bottom: 20px;
-        right: 20px;
-    }
+  @media (min-width: 768px) {
+    bottom: 20px;
+    right: 20px;
+  }
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .btn-back-to-top-img {
-    width: 40px;
+  width: 40px;
 
-    @media (min-width: 768px) {
-        width: 50px;
-    }
+  @media (min-width: 768px) {
+    width: 50px;
+  }
 }

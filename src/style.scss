@@ -1,59 +1,59 @@
-@use './variables.scss' as *;
-@use './reset.scss';
-@use './header.scss';
-@use './header-animation.scss';
-@use './buttons.scss';
-@use './scroll-button.scss';
-@use './about-me.scss';
-@use './about-me-animation.scss';
-@use './skills.scss';
-@use './projects.scss';
-@use './footer.scss';
-@use './form.scss';
+@use "./variables.scss" as *;
+@use "./reset.scss";
+@use "./header.scss";
+@use "./header-animation.scss";
+@use "./buttons.scss";
+@use "./scroll-button.scss";
+@use "./about-me.scss";
+@use "./about-me-animation.scss";
+@use "./skills.scss";
+@use "./projects.scss";
+@use "./footer.scss";
+@use "./form.scss";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-size: 12px;
-    font-family: 'Roboto', sans-serif;
-    color: $black;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  color: $black;
+  background-color: $white;
+
+  .content {
+    width: 100%;
+    height: auto;
+  }
+
+  .bg-white {
+    width: 100%;
+    height: auto;
     background-color: $white;
+  }
 
-    .content {
-        width: 100%;
-        height: auto;
-    }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-    .bg-white {
-        width: 100%;
-        height: auto;
-        background-color: $white;
-    }
+  @media (min-width: 450px) {
+    font-size: 14px;
+  }
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+  @media (min-width: 576px) {
+    font-size: 16px;
+  }
 
-    @media (min-width: 450px) {
-        font-size: 14px;
-    }  
-    
-    @media (min-width: 576px) {
-        font-size: 16px;
-    } 
+  @media (min-width: 650px) {
+    font-size: 17px;
+  }
 
-    @media (min-width: 650px) {
-        font-size: 17px;
-    } 
-
-    @media (min-width: 992px) {
-        font-size: 18px;
-    } 
+  @media (min-width: 992px) {
+    font-size: 18px;
+  }
 }

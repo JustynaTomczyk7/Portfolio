@@ -1,7 +1,6 @@
-import './style.scss'
+import "./style.scss";
 
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", () => {
   seeMenu();
   onMobileMenuElementClicked();
 
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       mybutton.style.display = "none";
     }
-  }
+  };
 
   const mybutton = document.querySelector("#btn-back-to-top");
   mybutton.addEventListener("click", () => {
@@ -24,27 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function seeMenu() {
-  const hamburger = document.querySelector('#see-menu');
-  const menu = document.querySelector('#menu-content');
+  const hamburger = document.querySelector("#see-menu");
+  const menu = document.querySelector("#menu-content");
 
   function toggleMenu() {
-    hamburger.classList.toggle('active');
-    menu.classList.toggle('d-none');
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("d-none");
   }
 
-  hamburger.addEventListener('click', toggleMenu);
+  hamburger.addEventListener("click", toggleMenu);
 }
 
 function onMobileMenuElementClicked() {
-  const menu = document.querySelector('#menu-content');
-  const menuElements = document.querySelectorAll('#menu li');
-  const hamburger = document.querySelector('#see-menu');
+  const menu = document.querySelector("#menu-content");
+  const menuElements = document.querySelectorAll("#menu li");
+  const hamburger = document.querySelector("#see-menu");
 
-  menuElements.forEach(element => {
-    element.addEventListener('click', () => {
-      document.querySelector('.animated-icon').classList.remove('open');
-      hamburger.classList.remove('active');
-      menu.classList.add('d-none');
-    })
-  })
+  menuElements.forEach((element) => {
+    element.addEventListener("click", () => {
+      document.querySelector(".animated-icon").classList.remove("open");
+      hamburger.classList.remove("active");
+      menu.classList.add("d-none");
+    });
+  });
 }
