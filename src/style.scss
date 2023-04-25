@@ -1,11 +1,11 @@
 @use "./variables.scss" as *;
 @use "./reset.scss";
+@use "./bg-animation.scss";
 @use "./header.scss";
 @use "./header-animation.scss";
 @use "./buttons.scss";
 @use "./scroll-button.scss";
 @use "./about-me.scss";
-@use "./about-me-animation.scss";
 @use "./skills.scss";
 @use "./projects.scss";
 @use "./footer.scss";
@@ -21,19 +21,13 @@ html {
 
 body {
   font-size: 12px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   color: $black;
   background-color: $white;
 
   .content {
     width: 100%;
     height: auto;
-  }
-
-  .bg-white {
-    width: 100%;
-    height: auto;
-    background-color: $white;
   }
 
   .container {

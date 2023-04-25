@@ -10,7 +10,7 @@
   span,
   span::before,
   span::after {
-    background: $green;
+    background: $pink;
     border-radius: 3px;
     content: "";
     position: absolute;
@@ -52,28 +52,33 @@
 }
 
 /* header */
+.header-buttons {
+  display: flex;
+  gap: 20px;
+}
+
 .btn-header {
   display: block;
-  width: fit-content;
-  background-color: $green;
-  border: 3px solid $green;
+  width: 120px;
+  text-align: center;
+  background-color: $white;
+  border: 3px solid $white;
   border-radius: 50px;
   font-size: 1.1em;
+  font-weight: 500;
   padding: 12px 20px;
-  color: $softWhite;
+  color: $black;
   text-decoration: none;
 
   &:hover {
-    background-color: $softWhite;
-    color: $green;
+    color: $pink;
     cursor: pointer;
   }
 }
 
 /* projects */
 .btn-projects {
-  background-color: $green;
-  border: 3px solid $green;
+  background-color: $purple;
   border-radius: 50px;
   padding: 6px 12px;
   color: $white;
@@ -102,7 +107,7 @@
 
   @media (min-width: 768px) {
     padding: 8px 16px;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 }
 

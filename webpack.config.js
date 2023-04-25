@@ -17,6 +17,15 @@ const config = {
     open: true,
     host: "localhost",
     watchFiles: ["./src/*"],
+    proxy: {
+      "/mail": {
+        target: {
+          host: "localhost",
+          protocol: "http:",
+          port: 7000,
+        },
+      },
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

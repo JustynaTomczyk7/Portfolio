@@ -9,7 +9,8 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "autoprefixer": "^10.4.12",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
+    "dotenv": "^16.0.3",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "postcss": "^8.4.18",
@@ -31,6 +33,8 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.1",
     "particles.js": "^2.0.0"
   }
 }
