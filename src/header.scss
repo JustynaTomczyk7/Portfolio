@@ -2,14 +2,14 @@
 
 header {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   color: $white;
   z-index: 1;
 
   .header-grid {
     display: grid;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 10% 40% 40% 10%;
     grid-template-areas:
@@ -37,6 +37,22 @@ nav {
   background-color: $white;
   box-shadow: $shadow;
 
+  .menu-mobile {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.2em;
+      color: $pink;
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
   @media (min-width: 768px) {
     position: absolute;
     top: 0;
@@ -56,7 +72,7 @@ nav {
   margin: 20px 0;
 
   li {
-    padding: 20px 40px;
+    padding: 20px 0;
     font-weight: 400;
   }
 
@@ -73,6 +89,12 @@ nav {
     @media (min-width: 768px) {
       color: $white;
       font-size: 1.3em;
+      padding: 15px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 1.4em;
+      padding: 30px;
     }
   }
 
@@ -96,10 +118,9 @@ nav {
 
 .header-text {
   grid-area: text;
-  padding-left: 10%;
 
   .hello {
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin-top: 15%;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -110,7 +131,7 @@ nav {
   }
 
   .header-name {
-    font-size: 3.1em;
+    font-size: 2em;
     margin-bottom: 30px;
     font-weight: 400;
     white-space: nowrap;
@@ -122,6 +143,10 @@ nav {
     @media (min-width: 768px) {
       font-size: 3em;
     }
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 10% !important;
   }
 }
 

@@ -17,13 +17,15 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
-  font-size: 12px;
+  font-size: 16px;
   font-family: "Fira Sans", sans-serif;
   color: $black;
   background-color: $white;
+  height: 100%;
 
   .content {
     width: 100%;
@@ -35,19 +37,23 @@ body {
     margin: 0 auto;
   }
 
+  .container-padding {
+    padding: 0 30px;
+
+    @media (min-width: 768px) {
+      padding: 0 40px;
+    }
+
+    @media (min-width: 992px) {
+      padding: 0 50px;
+    }
+  }
+
+  .full-h {
+    height: 100%;
+  }
+
   @media (min-width: 450px) {
-    font-size: 14px;
-  }
-
-  @media (min-width: 576px) {
-    font-size: 16px;
-  }
-
-  @media (min-width: 650px) {
-    font-size: 17px;
-  }
-
-  @media (min-width: 992px) {
     font-size: 18px;
   }
 }

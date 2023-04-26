@@ -3,23 +3,13 @@
 .footer {
   width: 100%;
   height: auto;
-  padding-top: 40px;
 
   .contact-to-me {
     display: grid;
-    padding: 0 30px;
-
-    @media (min-width: 576px) {
-      padding: 0 50px;
-    }
-
-    @media (min-width: 650px) {
-      padding: 0 70px;
-    }
+    padding-top: 30px;
 
     @media (min-width: 768px) {
       display: flex;
-      padding: 0 70px;
     }
   }
 }
@@ -28,7 +18,7 @@
   width: 100%;
   position: relative;
   order: 2;
-  padding: 30px 15px 60px 15px;
+  padding-bottom: 60px;
 
   h2 {
     color: $white;

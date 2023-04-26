@@ -2,10 +2,11 @@
 
 .projects {
   width: 100%;
-  padding: 60px 30px;
   text-align: center;
+  margin-bottom: 40px;
 
   h3 {
+    padding-top: 70px;
     text-align: center;
     font-size: 200%;
     font-weight: 500;
@@ -18,15 +19,12 @@
   }
 
   @media (min-width: 576px) {
-    padding: 60px 50px;
   }
 
   @media (min-width: 650px) {
-    padding: 60px 70px;
   }
 
   @media (min-width: 768px) {
-    padding: 60px 90px;
   }
 }
 
@@ -38,11 +36,15 @@
   display: grid;
   width: 100%;
   height: auto;
-  gap: 15px;
-  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "project1 project2 project6"
-    "project7 project3 project5";
+    "project1"
+    "project2"
+    "project6"
+    "project7"
+    "project3"
+    "project5";
 
   .project1 {
     grid-area: project1;
@@ -66,6 +68,23 @@
 
   .project7 {
     grid-area: project7;
+  }
+
+  @media (min-width: 576px) {
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "project1 project2"
+      "project6 project7"
+      "project3 project5";
+  }
+
+  @media (min-width: 992px) {
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "project1 project2 project6"
+      "project7 project3 project5";
   }
 }
 

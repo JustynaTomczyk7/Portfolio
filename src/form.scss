@@ -11,7 +11,7 @@
 
   h3 {
     color: $white;
-    padding: 20px 15px 0;
+    padding: 20px 15px 20px;
     font-weight: 500;
     font-size: 1.2em;
     text-align: center;
@@ -20,16 +20,15 @@
   .contact-form {
     width: 100%;
     margin: 0 auto;
-    padding: 15px;
-
-    @media (min-width: 768px) {
-      padding: 40px 20px;
-    }
   }
 
   @media (min-width: 768px) {
     width: 50%;
     order: 2;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 80px;
   }
 }
 
@@ -80,7 +79,7 @@
     z-index: 2;
     color: $white;
 
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
       font-size: 0.9em;
     }
   }
@@ -101,14 +100,14 @@
   background-color: $white;
   color: $pink;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 600;
   text-align: center;
-  height: 30px;
   border: none;
   border-radius: 50px;
   width: 100%;
   transition: all 0.3s ease-out;
+  padding: 12px 20px;
 
   &:hover {
     background-color: $pink;
@@ -116,9 +115,5 @@
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
     cursor: pointer;
-  }
-
-  @media (min-width: 768px) {
-    height: 40px;
   }
 }
