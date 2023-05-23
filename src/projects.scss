@@ -40,11 +40,14 @@
   grid-template-columns: 1fr;
   grid-template-areas:
     "project1"
-    "project2"
+    "project8"
+    "project9"
     "project6"
     "project7"
+    "project2"
     "project3"
-    "project5";
+    "project5"
+    "project4";
 
   .project1 {
     grid-area: project1;
@@ -56,6 +59,10 @@
 
   .project3 {
     grid-area: project3;
+  }
+
+  .project4 {
+    grid-area: project4;
   }
 
   .project5 {
@@ -70,21 +77,32 @@
     grid-area: project7;
   }
 
+  .project8 {
+    grid-area: project8;
+  }
+
+  .project9 {
+    grid-area: project9;
+  }
+
   @media (min-width: 576px) {
     gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "project1 project2"
+      "project1 project9"
+      "project8 project2"
       "project6 project7"
-      "project3 project5";
+      "project3 project5"
+      "project4 .";
   }
 
   @media (min-width: 992px) {
     gap: 15px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "project1 project2 project6"
-      "project7 project3 project5";
+      "project1 project8 project9"
+      "project6 project4 project7"
+      "project3 project2 project5";
   }
 }
 
@@ -126,14 +144,9 @@
   }
 }
 
-.odd {
+.anim {
   background-color: $purple;
   bottom: 0;
-}
-
-.even {
-  background-color: $pink;
-  top: 0;
 }
 
 .project:hover .overlay {
