@@ -76,9 +76,6 @@
     />
   </head>
   <body>
-    <script>
-      hidePreloader();
-    </script>
     <%= require('html-loader!./header.html').default %>
     <div id="content-website">
       <%= require('html-loader!./about-me.html').default %>
@@ -88,4 +85,8 @@
     <%= require('html-loader!./footer.html').default %>
     <%=require('html-loader!./btn-back-to-top.html').default %>
   </body>
+
+  <script>
+    hidePreloader();
+  </script>
 </html>
