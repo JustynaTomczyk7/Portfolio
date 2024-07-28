@@ -1,21 +1,24 @@
 @use "./variables.scss" as *;
 
-/* menu */
 .menu-btn {
   height: 24px;
   width: 35px;
   cursor: pointer;
-  margin: 15px 0 15px auto;
+  margin: 0 0 0 auto;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 
   span,
   span::before,
   span::after {
-    background: $pink;
+    background: $white;
     border-radius: 3px;
     content: "";
     position: absolute;
     width: 35px;
-    height: 4px;
+    height: 3px;
     margin-top: 10px;
     transition: 0.3s ease-in-out;
   }
@@ -31,83 +34,104 @@
   }
 }
 
-.menu-btn.active {
-  span {
-    background: transparent;
+#close-menu {
+  height: 24px;
+  width: 35px;
+  cursor: pointer;
+  margin: 0 0 0 auto;
 
-    &::before {
-      margin-top: 0;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      margin-top: 0;
-      transform: rotate(-45deg);
-    }
+  @media (min-width: 768px) {
+    display: none;
   }
-}
 
-/* header */
-.header-buttons {
-  display: flex;
-  gap: 20px;
+  span,
+  span::before,
+  span::after {
+    background: $mainColor;
+    border-radius: 3px;
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+  }
 }
 
 .btn-header {
-  display: block;
-  width: 120px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  width: fit-content;
   background-color: $white;
-  border: 3px solid $white;
-  border-radius: 50px;
-  font-size: 1.1em;
+  border: 1px solid $white;
+  font-size: 13px;
+  padding: 15px 30px;
+  color: $mainColor;
+  text-decoration: none;
+  letter-spacing: 3px;
   font-weight: 500;
-  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.btn-about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  border: 1px solid $black;
+  width: fit-content;
+  padding: 12px 55px;
+  margin-top: 40px;
   color: $black;
   text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border-radius: 30px;
+  min-height: 50px;
 
   &:hover {
-    color: $pink;
-    cursor: pointer;
+    color: $white;
+    background: $mainColor;
+    border-color: $mainColor;
   }
 }
 
-/* projects */
 .btn-projects {
-  background-color: $purple;
-  border-radius: 50px;
-  padding: 12px 20px;
-  color: $white;
-  margin-top: 30px;
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+  background-color: $white;
+  border: 1px solid $black;
+  color: $black;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px 55px;
+  min-height: 50px;
   text-decoration: none;
-
-  img {
-    width: 30px;
-
-    @media (min-width: 992px) {
-      width: 40px;
-    }
-  }
-
-  p {
-    align-self: center;
-    padding-left: 10px;
-    font-size: 1.1em;
-    font-weight: 600;
-  }
+  letter-spacing: 3px;
+  font-weight: 500;
+  margin: 60px auto 40px;
+  border-radius: 30px;
+  cursor: pointer;
 
   &:hover {
-    cursor: pointer;
-  }
-
-  @media (min-width: 768px) {
-    padding: 8px 16px;
-    margin-top: 40px;
+    background-color: $mainColor;
+    border-color: $mainColor;
+    color: $white;
   }
 }
 
-/* scroll to top */
 .btn-back-to-top {
   position: fixed;
   bottom: 10px;

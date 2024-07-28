@@ -5,30 +5,19 @@
 }
 
 .form {
-  width: 100%;
-  order: 1;
-  margin-bottom: 30px;
+  width: calc(50% - 15px);
 
-  h3 {
-    color: $white;
-    padding: 20px 15px 20px;
-    font-weight: 500;
-    font-size: 1.2em;
-    text-align: center;
+  @media (max-width: 900px) {
+    width: 100%;
   }
 
   .contact-form {
     width: 100%;
     margin: 0 auto;
-  }
-
-  @media (min-width: 768px) {
-    width: 50%;
-    order: 2;
-  }
-
-  @media (min-width: 768px) {
-    margin-bottom: 80px;
+    border: 1px solid $white;
+    padding: 50px 30px 60px;
+    border-radius: 20px;
+    position: relative;
   }
 }
 
@@ -53,7 +42,7 @@
 
   .form-label {
     position: absolute;
-    left: 10px;
+    left: 0;
     top: 60px;
     display: block;
     margin: 0;
@@ -73,15 +62,12 @@
     margin: 0;
     outline: none;
     border: none;
-    padding: 30px 10px;
+    padding: 30px 0 0;
     width: 100%;
     position: relative;
     z-index: 2;
     color: $white;
-
-    @media (min-width: 576px) {
-      font-size: 0.9em;
-    }
+    font-size: 16px;
   }
 
   .form-input:focus + label {
@@ -98,22 +84,27 @@
 
 .btn-form {
   background-color: $white;
-  color: $pink;
+  color: $mainColor;
   text-transform: uppercase;
   font-size: 1em;
   font-weight: 600;
   text-align: center;
   border: none;
-  border-radius: 50px;
+  border-radius: 30px;
   width: 100%;
   transition: all 0.3s ease-out;
-  padding: 12px 20px;
+  margin-top: 30px;
+  width: 100%;
+  cursor: pointer;
+  padding: 12px 55px;
+  min-height: 50px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    max-width: 100%;
+  }
 
   &:hover {
-    background-color: $pink;
-    color: $white;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-    cursor: pointer;
+    color: $black;
   }
 }

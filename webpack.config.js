@@ -30,6 +30,8 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      scriptLoading: "blocking",
+      inject: "head",
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: "./src/assets" }],

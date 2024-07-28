@@ -24,6 +24,7 @@ Project is created with:
 - SCSS
 - HTML
 - JavaScript
+- Swiper
 - Webpack
 
 ## Installation

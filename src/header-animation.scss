@@ -1,11 +1,11 @@
 @use "./variables.scss" as *;
 
 .typing-animation {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   .typing-name {
-    width: 19ch;
-    animation: Typing 3s steps(19), 0.5s step-end infinite alternate;
+    width: 21ch;
+    animation: Typing 3s steps(21), 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -15,6 +15,10 @@
 
     @media (min-width: 576px) {
       font-size: 2.1em;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 1.5em;
     }
   }
 }

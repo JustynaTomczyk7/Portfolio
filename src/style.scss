@@ -1,6 +1,5 @@
 @use "./variables.scss" as *;
 @use "./reset.scss";
-@use "./bg-animation.scss";
 @use "./header.scss";
 @use "./header-animation.scss";
 @use "./buttons.scss";
@@ -21,39 +20,17 @@ html {
 }
 
 body {
-  font-size: 16px;
-  font-family: "Fira Sans", sans-serif;
-  color: $black;
   background-color: $white;
-  height: 100%;
-
-  .content {
-    width: 100%;
-    height: auto;
-  }
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+    max-width: 1500px;
+    padding: 0 40px;
+    margin: auto;
 
-  .container-padding {
-    padding: 0 30px;
-
-    @media (min-width: 768px) {
-      padding: 0 40px;
+    @media (max-width: 767px) {
+      padding: 0 20px;
     }
-
-    @media (min-width: 992px) {
-      padding: 0 50px;
-    }
-  }
-
-  .full-h {
-    height: 100%;
-  }
-
-  @media (min-width: 450px) {
-    font-size: 18px;
   }
 }

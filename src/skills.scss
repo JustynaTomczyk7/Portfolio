@@ -1,77 +1,109 @@
 @use "./variables.scss" as *;
 
-.skills {
-  h3 {
-    padding-top: 70px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 500;
-    margin-bottom: 40px;
-    color: $pink;
+#skills {
+  padding: 90px 0 120px;
+  position: relative;
+  z-index: 0;
+  background: url("./img/skill-background.webp") no-repeat center;
+  background-size: cover;
 
-    @media (min-width: 768px) {
+  @media (max-width: 767px) {
+    padding: 70px 0 90px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $gradientBg;
+    z-index: -1;
+  }
+
+  .container {
+    max-width: 1500px;
+
+    h3 {
+      line-height: 1.5;
+      opacity: 0.9;
+      color: $white;
+      font-weight: 600;
+      font-size: 34px;
       margin-bottom: 60px;
-    }
-  }
-}
+      text-transform: uppercase;
+      text-align: center;
 
-.all-skills {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-between;
-
-  .skills-content {
-    width: 48%;
-    height: auto;
-    background-color: $white;
-    border-radius: 50px;
-    box-shadow: $shadow;
-    transition-duration: 400ms;
-    display: flex;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-
-    &:hover {
-      transform: scale(1.04);
-    }
-
-    img {
-      width: 30px;
-      height: auto;
-      margin-right: 10px;
-      object-fit: contain;
-
-      @media (min-width: 576px) {
-        width: 45px;
+      @media (max-width: 767px) {
+        font-size: 30px;
+        margin-bottom: 30px;
       }
     }
 
-    p {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      font-weight: 500;
+    .all-skills {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 30px;
+      justify-content: center;
 
-      @media (min-width: 450px) {
-        font-size: 1.1em;
+      @media (max-width: 767px) {
+        gap: 15px;
+      }
+
+      .skills-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 180px;
+        padding: 15px;
+        background-color: $white;
+        border: 1px solid transparent;
+        box-shadow: $shadow;
+        border-radius: 10px;
+
+        &:hover {
+          border-color: $black;
+        }
+
+        @media (max-width: 767px) {
+          width: calc(30% - 40px / 3);
+          max-width: 200px;
+        }
+
+        @media (max-width: 600px) {
+          width: calc(50% - 10px);
+          max-width: 200px;
+          min-height: 80px;
+        }
+
+        &.logo {
+          img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            max-height: 35px;
+            object-fit: contain;
+          }
+        }
+
+        img {
+          max-width: 70px;
+          max-height: 50px;
+          object-fit: contain;
+
+          @media (max-width: 600px) {
+            max-width: 40px;
+            max-height: 40px;
+          }
+        }
+
+        p {
+          font-weight: 600;
+        }
       }
     }
-
-    &:hover {
-      color: $pink;
-    }
-
-    @media (min-width: 650px) {
-      width: 32%;
-    }
-
-    @media (min-width: 850px) {
-      width: 24%;
-    }
-  }
-
-  @media (min-width: 650px) {
-    justify-content: center;
-    gap: 10px;
   }
 }

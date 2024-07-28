@@ -1,8 +1,13 @@
 /*Color*/
-$softWhite: #fefdfb;
+$mainColor: #4c00ff;
 $white: #fff;
 $black: #000;
-$gradientBg: linear-gradient(130deg, #fc3480, #4b10af, #181b38);
-$pink: #fc3480;
-$purple: #4b10af;
-$shadow: 0px 0px 39px -22px rgb(133 133 133);
+$blackText: #5d5d5d;
+$grayDark: #8b8b8b;
+$grayBg: #27353b;
+$gradientBg: -webkit-linear-gradient(
+  90deg,
+  rgb(76 135 206 / 90%) 0%,
+  rgba(127, 86, 253, 0.9) 100%
+);
+$shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);

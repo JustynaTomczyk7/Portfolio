@@ -21,41 +21,26 @@
     <title>Justyna Tomczyk</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Mono&display=swap"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="background-header">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <%= require('html-loader!./header.html').default %>
+    <%= require('html-loader!./header.html').default %>
+    <div id="content-website">
+      <%= require('html-loader!./about-me.html').default %>
+      <%=require('html-loader!./skills.html').default %>
+      <%=require('html-loader!./projects.html').default %>
     </div>
-    <div class="content" id="content-website">
-      <div class="container">
-        <%= require('html-loader!./about-me.html').default %>
-      </div>
-      <div class="skills-bg">
-        <div class="container">
-          <%= require('html-loader!./skills.html').default %>
-        </div>
-      </div>
-      <div class="container">
-        <%= require('html-loader!./projects.html').default %>
-      </div>
-    </div>
-    <div class="background-footer">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <%= require('html-loader!./footer.html').default %> <%=
-      require('html-loader!./btn-back-to-top.html').default %>
-    </div>
+    <%= require('html-loader!./footer.html').default %>
+    <%=require('html-loader!./btn-back-to-top.html').default %>
   </body>
 </html>

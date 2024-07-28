@@ -1,154 +1,144 @@
 @use "./variables.scss" as *;
 
-.projects {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 40px;
+#projects {
+  padding: 90px 0 80px;
+  background-color: $white;
+  position: relative;
+  z-index: 0;
+
+  @media (max-width: 767px) {
+    padding: 70px 0 60px;
+  }
+
+  .container {
+    max-width: 1500px;
+  }
 
   h3 {
-    padding-top: 70px;
+    line-height: 1.5;
+    opacity: 0.9;
+    color: $black;
+    font-weight: 600;
+    font-size: 34px;
+    text-transform: uppercase;
     text-align: center;
-    font-size: 200%;
-    font-weight: 500;
-    margin-bottom: 40px;
-    color: $purple;
+    margin-bottom: 60px;
+    color: $black;
 
-    @media (min-width: 768px) {
-      margin-bottom: 60px;
+    @media (max-width: 767px) {
+      font-size: 30px;
+      margin-bottom: 30px;
     }
   }
 
-  @media (min-width: 576px) {
+  .all-projects {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 10px 10px 50px;
+
+    .swiper-pagination {
+      bottom: 0;
+
+      .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+        background: $grayDark;
+
+        &.swiper-pagination-bullet-active {
+          background: $mainColor;
+        }
+      }
+    }
+
+    .project {
+      position: relative;
+      transition: all 0.5s ease-out;
+      border-radius: 10px;
+      box-shadow: $shadow;
+
+      &:hover {
+        .overlay {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+
+      .overlay {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(133, 91, 249, 0.9);
+        border-radius: 10px;
+        justify-content: flex-end;
+        padding: 30px;
+        align-content: flex-start;
+
+        .overlay-text {
+          line-height: 1.5;
+          opacity: 0.9;
+          color: $white;
+          font-weight: 500;
+          font-size: 25px;
+          text-align: left;
+        }
+
+        button {
+          background-color: transparent;
+          color: $white;
+          font-size: 14px;
+          font-weight: 600;
+          text-align: center;
+          border: none;
+          border-radius: 100%;
+          padding: 20px;
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          &::before {
+            content: "";
+            display: block;
+            width: 45px;
+            height: 45px;
+            background: url("./img/logo-github.png") no-repeat center;
+            background-size: contain;
+          }
+        }
+      }
+    }
   }
-
-  @media (min-width: 650px) {
-  }
-
-  @media (min-width: 768px) {
-  }
-}
-
-.all-projects * {
-  box-sizing: border-box;
-}
-
-.all-projects {
-  display: grid;
-  width: 100%;
-  height: auto;
-  gap: 10px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "project1"
-    "project8"
-    "project9"
-    "project6"
-    "project7"
-    "project2"
-    "project3"
-    "project5"
-    "project4";
-
-  .project1 {
-    grid-area: project1;
-  }
-
-  .project2 {
-    grid-area: project2;
-  }
-
-  .project3 {
-    grid-area: project3;
-  }
-
-  .project4 {
-    grid-area: project4;
-  }
-
-  .project5 {
-    grid-area: project5;
-  }
-
-  .project6 {
-    grid-area: project6;
-  }
-
-  .project7 {
-    grid-area: project7;
-  }
-
-  .project8 {
-    grid-area: project8;
-  }
-
-  .project9 {
-    grid-area: project9;
-  }
-
-  @media (min-width: 576px) {
-    gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "project1 project9"
-      "project8 project2"
-      "project6 project7"
-      "project3 project5"
-      "project4 .";
-  }
-
-  @media (min-width: 992px) {
-    gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "project1 project8 project9"
-      "project6 project4 project7"
-      "project3 project2 project5";
-  }
-}
-
-.project {
-  position: relative;
-}
-
-.img-project {
-  width: 100%;
-  box-shadow: $shadow;
-}
-
-.overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: 0.5s ease;
-
-  .overlay-text {
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    margin-top: 30%;
-    margin-bottom: 30px;
-    line-height: 150%;
-  }
-
-  .overlay-btn {
-    color: $white;
-    background-color: transparent;
-    border: 2px solid $white;
-    border-radius: 50px;
-    font-size: 20px;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-}
-
-.anim {
-  background-color: $purple;
-  bottom: 0;
-}
-
-.project:hover .overlay {
-  height: 100%;
 }

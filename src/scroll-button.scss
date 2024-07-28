@@ -2,52 +2,43 @@
 
 $scrollHeight: 40px;
 $scrollWidth: 20px;
-$scrollColor: $white;
-$scrollWheelColor: $scrollColor;
 $hoverTransition: 0.2s ease-in-out;
-$scrollHoverColor: $pink;
-$scrollWheelHoverColor: $scrollHoverColor;
 
 .scroll-btn-container {
   text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 7%;
 
   .scroll-outer {
     position: relative;
     display: inline-block;
-
     height: $scrollHeight;
     width: $scrollWidth;
-
-    border: 2px solid $scrollColor;
+    border: 2px solid $white;
     border-radius: $scrollHeight;
-
     transition: border-color $hoverTransition;
 
     .scroll-wheel {
       $wheelWidth: #{calc($scrollWidth / 6)};
       $halfWheelWidth: #{calc($scrollWidth / 12)};
-
       position: absolute;
       top: 10%;
       left: 50%;
       margin-left: -$halfWheelWidth;
-
       height: #{calc($scrollHeight / 4)};
       width: $wheelWidth;
-      background-color: $scrollWheelColor;
-
+      background-color: $white;
       border-radius: $wheelWidth;
-
       transition: background-color $hoverTransition;
-
       animation: scroll 1.4s infinite linear;
     }
 
     &:hover {
-      border-color: $scrollHoverColor;
+      border-color: $black;
 
       .scroll-wheel {
-        background-color: $scrollWheelHoverColor;
+        background-color: $black;
       }
     }
   }

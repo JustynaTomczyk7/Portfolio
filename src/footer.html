@@ -1,24 +1,26 @@
 <section class="footer container-padding" id="contact">
   <div class="container">
+    <h3>Contact Me</h3>
     <div class="contact-to-me">
       <div class="contact">
         <h2>Justyna Tomczyk</h2>
+        <div class="nip"><span>NIP:</span><span>9452278922</span></div>
+        <div class="regon"><span>REGON:</span><span>526323760</span></div>
         <div class="email">
-          <img src="./img/email.png" alt="Ikona email" />
-          <p>tomczykjustyna99@gmail.com</p>
+          <span>E-MAIL:</span><span>tomczykjustyna99@gmail.com</span>
         </div>
-        <div class="phone">
-          <img src="./img/phone.png" alt="Ikona telefon" />
-          <p>530 298 458</p>
-        </div>
-
-        <div class="contact-img">
-          <img src="img/contact-img.png" alt="Kontakt img" />
+        <div class="email"><span>PHONE:</span><span>+48 530 298 458</span></div>
+        <div class="footer-buttons">
+          <a class="btn-header" href="./CV-Justyna-Tomczyk.pdf" download>CV</a>
+          <a
+            class="btn-header"
+            href="https://github.com/JustynaTomczyk7"
+            target="_blank"
+            >GitHub</a
+          >
         </div>
       </div>
-
       <div class="form">
-        <h3>Napisz do mnie!</h3>
         <form name="contact_form" method="post" class="contact-form" id="form">
           <div class="input-block">
             <input
@@ -28,7 +30,7 @@
               id="name"
               required
             />
-            <label for="name" class="form-label">Imię i Nazwisko *</label>
+            <label for="name" class="form-label">Your name</label>
           </div>
 
           <div class="input-block">
@@ -39,7 +41,7 @@
               id="email"
               required
             />
-            <label for="email" class="form-label">E-mail *</label>
+            <label for="email" class="form-label">Your email</label>
           </div>
 
           <div class="input-block textarea">
@@ -51,13 +53,13 @@
               id="message"
               required
             ></textarea>
-            <label for="message" class="form-label">Treść wiadomości *</label>
+            <label for="message" class="form-label">Message</label>
           </div>
-          <input type="submit" value="Wyślij wiadomość" class="btn-form" />
+          <button type="submit" class="btn-form">Send Message</button>
         </form>
       </div>
     </div>
   </div>
 
-  <div class="notice" id="notice">Wiadomość została wysłana!</div>
+  <div class="notice" id="notice">Message sent!</div>
 </section>
