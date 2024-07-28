@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
   <head>
+    <style>
+      html::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+        background: #fff url("<%= require('./img/loader.svg') %>") center
+          no-repeat;
+        background-size: 60px;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      html.preloader-hidden::after {
+        display: none !important;
+        content: none;
+      }
+    </style>
+    <script>
+      var preloader = document.getElementsByTagName("html")[0];
+      function hidePreloader() {
+        setTimeout(function () {
+          setTimeout(function () {
+            preloader.classList.add("preloader-hidden");
+          }, 200);
+        }, 0);
+      }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -18,7 +47,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Justyna Tomczyk</title>
+    <meta
+      name="description"
+      content="Hi, I'm Justyna, a frontend developer specializing in designing and building websites."
+    />
+    <meta
+      name="keywords"
+      content="frontend developer, portfolio, web development, HTML, CSS, JavaScript, React, Krakow, Kraków, Cracow"
+    />
+    <meta name="author" content="Justyna Tomczyk" />
+
+    <title>Justyna Tomczyk · Frontend Developer Portfolio</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
     <link
@@ -34,6 +73,9 @@
     />
   </head>
   <body>
+    <script>
+      hidePreloader();
+    </script>
     <%= require('html-loader!./header.html').default %>
     <div id="content-website">
       <%= require('html-loader!./about-me.html').default %>

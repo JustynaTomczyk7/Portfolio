@@ -141,7 +141,6 @@ function onMobileMenuElementClicked() {
 function mailHandler() {
   document.querySelector("#form").addEventListener("submit", async (e) => {
     e.preventDefault();
-    const noticeElement = document.querySelector("#notice");
 
     try {
       const formData = new FormData(e.target);
@@ -157,27 +156,34 @@ function mailHandler() {
       });
 
       if (response.ok) {
-        showMailSuccess(noticeElement);
+        showMailSuccess();
       } else {
-        showMailError(noticeElement);
+        showMailError();
       }
     } catch (error) {
-      showMailError(noticeElement);
+      showMailError();
     }
   });
 }
 
-function showMailError(noticeElement) {
-  noticeElement.innerHTML = "Error!<br><br>The message was not sent.";
-  noticeElement.style.display = "block";
-  setTimeout(() => {
-    noticeElement.style.display = "none";
-  }, 2000);
+function showMailSuccess() {
+  const noticeElement = document.querySelector(".modal.modal-success");
+  const noticeElementBtn = document.querySelector(
+    ".modal.modal-success button"
+  );
+  noticeElement.classList.add("open");
+
+  noticeElementBtn.addEventListener("click", () => {
+    noticeElement.classList.remove("open");
+  });
 }
 
-function showMailSuccess(noticeElement) {
-  noticeElement.style.display = "block";
-  setTimeout(() => {
-    noticeElement.style.display = "none";
-  }, 1500);
+function showMailError() {
+  const noticeElement = document.querySelector(".modal.modal-error");
+  const noticeElementBtn = document.querySelector(".modal.modal-error button");
+  noticeElement.classList.add("open");
+
+  noticeElementBtn.addEventListener("click", () => {
+    noticeElement.classList.remove("open");
+  });
 }
