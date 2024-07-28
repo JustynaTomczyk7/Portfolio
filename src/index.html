@@ -23,6 +23,7 @@
         overflow-x: clip;
       }
     </style>
+    <link rel="stylesheet" href="main.css" />
     <script>
       var preloader = document.getElementsByTagName("html")[0];
       function hidePreloader() {
@@ -75,6 +76,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <%= require('html-loader!./header.html').default %>
     <div id="content-website">
@@ -84,9 +86,11 @@
     </div>
     <%= require('html-loader!./footer.html').default %>
     <%=require('html-loader!./btn-back-to-top.html').default %>
-  </body>
 
-  <script>
-    hidePreloader();
-  </script>
+    <script>
+      hidePreloader();
+    </script>
+
+    <script src="main.js"></script>
+  </body>
 </html>

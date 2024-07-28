@@ -3,6 +3,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -30,12 +32,12 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      scriptLoading: "blocking",
-      inject: "body",
+      inject: false,
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: "./src/assets" }],
     }),
+    new MiniCssExtractPlugin(),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
@@ -43,12 +45,8 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "css-loader", "postcss-loader", "sass-loader"],
-      },
-      {
-        test: /\.css$/i,
-        use: [stylesHandler, "css-loader", "postcss-loader"],
+        test: /\.(scss|css)$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|pdf)$/i,
@@ -58,6 +56,9 @@ const config = {
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
+  },
+  optimization: {
+    minimizer: [`...`, new CssMinimizerPlugin()],
   },
 };
 
