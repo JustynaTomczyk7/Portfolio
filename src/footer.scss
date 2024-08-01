@@ -86,6 +86,10 @@
       color: $white;
       overflow-wrap: anywhere;
 
+      @media (max-width: 390px) {
+        font-size: 13px;
+      }
+
       &:first-child {
         display: block;
         width: 130px;
@@ -101,6 +105,11 @@
         @media (max-width: 390px) {
           width: 95px;
           min-width: 95px;
+        }
+
+        @media (max-width: 360px) {
+          width: 80px;
+          min-width: 80px;
         }
       }
     }
