@@ -126,6 +126,16 @@
                 min-width: 130px;
                 color: $black;
                 font-weight: 600;
+
+                @media (max-width: 430px) {
+                  width: 110px;
+                  min-width: 110px;
+                }
+
+                @media (max-width: 390px) {
+                  width: 95px;
+                  min-width: 95px;
+                }
               }
             }
           }
